@@ -831,6 +831,40 @@
             line-height: 1.55;
         }
 
+        .footer-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem 1.25rem;
+        }
+
+        .footer-credit {
+            color: #a9b8b2;
+            font-size: 0.86rem;
+        }
+
+        .footer-credit-heart {
+            display: inline-block;
+            color: var(--c-accent-bright);
+            margin: 0 0.15rem;
+        }
+
+        .footer-credit-link {
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: rgba(224, 184, 79, 0.55);
+            text-underline-offset: 0.22em;
+            transition: color var(--transition), text-decoration-color var(--transition);
+        }
+
+        .footer-credit-link:hover,
+        .footer-credit-link:focus-visible {
+            color: var(--c-accent-bright);
+            text-decoration-color: var(--c-accent-bright);
+        }
+
         /* Dezente Scroll-Animationen (nur wenn JS und Observer aktiv sind) */
         .js-motion .reveal {
             opacity: 0;
@@ -1445,7 +1479,12 @@
             <p class="footer-satire-box">
                 <strong>Hinweis zum Projektcharakter:</strong> Die Freie Ückheimer Bürgerinitiative (FÜB) ist ein humorvolles Fan- &amp; Satire-Projekt im Rahmen der fiktiven Stadt Ückheim (Projekt von eichenpass) und keine reale politische Partei oder eingetragene Organisation.
             </p>
-            <p>&copy; 2026 Freie Ückheimer Bürgerinitiative (FÜB) • Alle Rechte vorbehalten.</p>
+            <div class="footer-meta-row">
+                <p>&copy; 2026 Freie Ückheimer Bürgerinitiative (FÜB) • Alle Rechte vorbehalten.</p>
+                <p class="footer-credit">
+                    Mit <span class="footer-credit-heart" aria-hidden="true">♥</span> gebaut von <a href="https://siteforge-hosting.pages.dev/" target="_blank" rel="noopener noreferrer" class="footer-credit-link">SiteForge</a>
+                </p>
+            </div>
         </div>
     </footer>
 
